@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<div class="card">
+  <div class="card-header">
+    <h4>{{title}}</h4>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr style="text-align: center">
+        <th style="width: 15%;">Artykuł numer:</th>
+        <th style="width: 15%;">Nazwa artykułu:</th>
+        <th style="width: 15%;">Cena netto:</th>
+        <th style="width: 15%;">Stawka VAT:</th>
+        <th style="width: 15%;">Liczba sztuk w magazynie:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let artykul of artykul' style="text-align: center">
+        <td>{{artykul.kolejny}}</td>
+        <td>{{artykul.name}}</td>
+        <td>{{artykul.price}}</td>
+        <td>{{artykul.vat}}</td>
+        <td>{{artykul.amount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</html>

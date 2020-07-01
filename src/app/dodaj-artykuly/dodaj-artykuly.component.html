@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+  <div>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <div>Artykuł numer:
+        <input type="text" id="kolejny" placeholder="Numer">
+      </div>
+      <div>Nazwa artykułu:
+        <input type="text" [(ngModel)]="artykul.name" name="name" #name="ngModel" placeholder="Nazwa" required
+          minlength="4">
+        <div *ngIf="name.invalid">
+          Za krótka lub nieprawidłowa nazwa artykułu!
+        </div>
+      </div>
+      <div>Cena netto:
+        <input type="text" name="price" placeholder="Cena">
+      </div>
+        <div>Stawka VAT:
+          <input type="text" [(ngModel)]="artykul.vat" name="vat" #vat="ngModel" placeholder="VAT" required
+            value="5, 8, 23">
+          <div *ngIf="vat.invalid">
+            Nieistniejąca stawka VAT!
+          </div>
+        </div>
+        <div>Liczba sztuk w magazynie:
+          <input type="text" id="amount" placeholder="Stan magazynowy">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="name.invalid" [disabled]="vat.invalid">Zapisz
+        </button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>Sklep Zoologiczny Panda</head>
+
+<body>
+  <div class="obrazek" role="banner"><img width="150" alt="Logo"
+      src="https://zoopanda.pl/wp-content/uploads/2019/02/PANDA_LOGO_4500.png" />
+    <div style="text-align: left">
+      <nav class="nawigacja">
+        <a routerLink="/onas">O nas</a>
+        <a routerLink="/artykuly">Artykuły</a>
+        <a routerLink="/dodajartykuly">Dodaj artykuł</a>
+      </nav>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div style="text-align: center">
+    <h1>
+      Witamy {{ title }}!
+    </h1>
+  </div>
+  <div>
+<router-outlet></router-outlet>
+  </div>
+  <footer>
+    All rights reserved!
+  </footer>
+</body>
+
+</html>
